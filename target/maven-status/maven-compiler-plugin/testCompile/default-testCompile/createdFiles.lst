@@ -1,0 +1,7 @@
+staleElement/RestAssuredPOC/model/Address.class
+staleElement/RestAssuredPOC/stepdef/GetPostsSteps.class
+staleElement/RestAssuredPOC/model/LoginBody.class
+staleElement/RestAssuredPOC/model/Location.class
+staleElement/RestAssuredPOC/model/Posts.class
+staleElement/RestAssuredPOC/model/Posts$PostsBuilder.class
+staleElement/RestAssuredPOC/bddstyletest/TestGetPosts.class
