@@ -1,0 +1,59 @@
+{
+   "posts":[
+      {
+         "id":1,
+         "title":"json-server1",
+         "author":"virender"
+      },
+      {
+         "id":2,
+         "title":"json-server2",
+         "author":"singh"
+      },
+      {
+         "id":3,
+         "title":"json-server3",
+         "author":"pannu"
+      }
+   ],
+   "comments":[
+      {
+         "id":1,
+         "body":"some comment1",
+         "postId":1
+      },
+      {
+         "id":2,
+         "body":"some comment2",
+         "postId":2
+      },
+      {
+         "id":3,
+         "body":"some comment3",
+         "postId":3
+      }
+   ],
+   "address":[
+      {
+         "id":1,
+         "city":"hisar",
+         "state":"haryana",
+         "country":"india"
+      },
+      {
+         "id":2,
+         "city":"noida",
+         "state":"up",
+         "country":"india"
+      },
+      {
+         "id":3,
+         "city":"newdelhi",
+         "state":"delhi",
+         "country":"india"
+      }
+   ],
+   "profile":{
+      "name":"virender"
+   }
+}

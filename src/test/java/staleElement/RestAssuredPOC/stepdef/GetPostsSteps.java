@@ -1,7 +1,18 @@
 package staleElement.RestAssuredPOC.stepdef;
 
-import java.net.URISyntaxException;
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.when;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasItem;
 
+import java.net.URISyntaxException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -9,12 +20,6 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseOptions;
 import staleElement.RestAssuredPOC.utilities.RestAssuredExtension;
-
-import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
-import static org.hamcrest.Matchers.containsInAnyOrder;
-import static org.hamcrest.Matchers.*;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class GetPostsSteps {
 
@@ -50,4 +55,17 @@ public class GetPostsSteps {
             .statusCode(200);
     } 
 
+    @And("^I perform GET operation with path parameter for address \"([^\"]*)\"$")
+    public void iPerformGETOperationWithPathParameterForAddress(String url, DataTable table) throws Throwable {
+        List<List<String>> data = table.raw();
+
+        Map<String, String> queryParams = new HashMap<>();
+        queryParams.put("id", data.get(1).get(0));
+
+        //response = RestAssuredExtension.GetWithQueryParamsWithToken(url, pathParams, response.getBody().jsonPath().get("access_token"));
+
+        // EARestAssuredV2 eaRestAssuredV2 = new EARestAssuredV2(url,APIConstant.ApiMethods.GET,token);
+        // response = eaRestAssuredV2.ExecuteWithQueryParams(queryParams);
+    }
+    
 }
